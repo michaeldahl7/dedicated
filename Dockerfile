@@ -1,12 +1,12 @@
 FROM ghcr.io/lloesche/valheim-server
-# ARG \
-  # PORT \
+ARG \
+  PORT \
 ENV \
-    # PORT= \
+    PORT=$PORT \
     PUID=1000 \
     PGID=1000 \
     VALHEIM_PLUS=true \
     SERVER_NAME=Cuckers \
     WORLD_NAME=Dedicated \
     SERVER_PASS=secret 
-EXPOSE 2456/udp
+EXPOSE $PORT/udp

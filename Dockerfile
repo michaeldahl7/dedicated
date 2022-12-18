@@ -1,6 +1,5 @@
 FROM ghcr.io/lloesche/valheim-server
-ARG \
-  PORT \
+ARG PORT
 ENV \
     PORT=$PORT \
     PUID=1000 \
@@ -9,4 +8,5 @@ ENV \
     SERVER_NAME=Cuckers \
     WORLD_NAME=Dedicated \
     SERVER_PASS=secret 
+EXPOSE $PORT/tcp
 EXPOSE $PORT/udp
